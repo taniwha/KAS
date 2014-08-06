@@ -554,7 +554,8 @@ namespace KAS
             {
                 ConfigNode node = new ConfigNode();
                 node.AddValue("name", newPart.Modules[i].moduleName);
-                newPart.LoadModule(node, i);
+                int ind = i;
+                newPart.LoadModule(node, ref ind);
             }
 
             return newPart;
